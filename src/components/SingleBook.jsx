@@ -11,7 +11,7 @@ class SingleBook extends Component {
 
     render() {
         return (
-            <Col md={6} lg={3} key={this.props.asin}>
+            <Col sm={1} md={6} lg={3} key={this.props.asin}>
                 <Card className={this.state.selected ? "border border-5 border-danger mt-5" : "mt-5"} onClick={this.handleToggle}>
                     <Card.Img variant="top" src={this.props.img} height="400px" />
                     <Card.Body>
