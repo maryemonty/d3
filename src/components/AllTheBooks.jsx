@@ -13,8 +13,8 @@ class AllTheBooks extends Component {
             <>
                 <Container>
                     <Row>
-                        {books.map((book, index) => (
-                            <Col key={index}>
+                        {books.map((book) => (
+                            <Col md='3' key={book.asin}>
                                 <Card className="d-flex">
                                     <Card.Body>
                                         <Card.Text>
