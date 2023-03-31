@@ -5,11 +5,15 @@ class SingleBook extends Component {
     state = {
         selected: false
     }
+    handleToggle = () => {
+        this.setState({ selected: !this.state.selected });
+    };
+
     render() {
         return (
             <Col md={6} lg={3} key={this.props.asin}>
-                <Card className="my-3 mt-5">
-                    <Card.Img variant="top" src={this.props.img} onClick={() => this.setState({ selected: !this.state.selected })} />
+                <Card className={this.state.selected ? "border border-5 border-danger mt-5" : "mt-5"} onClick={this.handleToggle}>
+                    <Card.Img variant="top" src={this.props.img} height="400px" />
                     <Card.Body>
                         <Card.Text>
                             <h3>{this.props.title}</h3>
